@@ -1,0 +1,224 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* minimum yükseklik için 100% değerini verdim */
+    font-family: 'Source Sans Pro', sans-serif;  /*tasarımda belli olan font ailesinden olan fontuda kullanacağımı belli ettim */
+}
+
+.container {
+    width: auto; /*uzunluğu responsive olması için width i auto verdim */
+    max-width: 75%;  /* container içerisinde ki elemanların etiketlerin genişliğini 100de75 olarak ayarladım çok büyük olmamaları için */
+    margin: auto;
+}
+
+.header {
+    position: absolute; /* absolute kendisini kapsayan bir öge varsa ona göre konumlanır üste yazar kendisini eğer ki stactik deseydik ayrı olarak padding ile düzeltmemizi lazımdı */
+    width: 100%;
+    padding: 30px; /* padding saat yönünde yani up right down left şeklinde hareket eder vereceğimzi px değerleride sırasıyla buna göre olur */
+}
+
+.header .logo {
+    width: 50px;
+    float: left;  /* float özelliği belirttiğimiz logonun nereye doğru yaslanacağını belli eder eğer ki değerine right desem sağa yaslanacaktı */
+}
+
+.header .logo img {
+    width: 200px;/* burasıda yani logo image olan yer ise logonunu resmi için */
+    margin-left: -10px;  /* liste elemalarından biraz daha uzak kalması için margin left değerini eksi verdim*/
+}
+
+.header ul.header-nav {
+    list-style: none; /* none değeri vererek başında ki noktaları kaldırdım */
+    padding: 0;
+    margin:0px;
+    float: right;
+}
+
+.header ul.header-nav li {
+    float: left; /* listeyi soldan sağa doğru olarak dizdi eğer ki right deseydim sağdan sola dizecekti */
+}
+
+.header ul.header-nav li a {
+    display: block; /* blok şeklinde görünemsi için elemanlarımın block ile sardım */
+    padding: 10px; /* 10 pixel paddinglk birbirlerinden uzak olsunlar */
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;  /* yaızılarımızın altlarındaki çizginin kaybolması içinde text decorationa none değeri verdim */
+}
+
+.main {
+    width: 100%;
+    padding: 100px 0px;
+    background: url("../img/background.png"); /* sliderın arka planını belli etttik */
+    background-size: cover;  /* resimin boyutu farketmeksizin ortalamış halde gösterecektir arka planımızı */
+    display: flex; /* sen flexsin içinde ki itemleri align item ile ortala center alarak ve ustfiy space beetwen diyerekte arlarında eşit boşluklar bırak*/
+    align-items: center;
+    justify-content:space-between; /* elemanların hepsini aralarında eşit boşluklarla sıralanması içindir */
+}
+
+.main .main-left h1 {
+    font-size: 56px;  /* başlığımızın boyutunu ayarladık */
+    color: #fff;
+    max-width: 650px; /* maksimum şekilde dinamik olarak ne kadar genişlyecek en fazla diye belirttik*/
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.main .main-left p.desc {
+    font-weight: 300; /* yazıların büyüklüğü*/
+    font-size: 30px; /* belirttiğimiz font weight'in içerisinde ne kadar büyüklükte olacağı */
+    line-height: 45px;
+    color: #fff;
+    max-width: 500px;
+    margin-top: 20px; /* yukarıdaki başlık ile arasında ne kadar boşluk olacak onu belli ettim */
+}
+
+.main .main-left form input {
+    width: 400px; /* içerisine input alacak olan barın uzunluğu */
+    height: 40px; /* aha buda genişliği*/
+    border-radius: 20px; /* çerçevesinin ovalliği*/
+    border:none; /* çerçevesine verilecke olan renk veya none yani sade olacağı anlamına gelir istersek renkte verebilriz*/
+    padding: 0 px;
+    
+}
+
+.main .main-left form button { /* burada ise input yanında ki butonun özellikleri var */
+    background: #00BAF2;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.main .main-left form p {
+    color: #fff;
+    max-width: 300px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.main .main-left form p a { /* altı çizili olan alan*/
+    color: #fff;
+}
+
+.main .main-right img {
+    width: 500px;
+    max-width: 100%;
+}
+
+
+.brands .brand-flex li {
+    float: left;   /* markaların soldan sağa doğru yani listenin ilk elemanından doğru gelmesini sağladım */
+    width: calc(100% /5); /* toplamda 10 taen marka olduğu için uzunluğu 5 e böldüm 100de olarak  çünkü 5 aşağıda 5 yukarıda */
+    height: 100px; /*birbirleri ile olan yüksekliği ayarladım */
+    display: flex;
+    align-items: center;/*  markaların hepsini ortada şekillerini bozmadan oturttu eğer ki stretch deseydik uzatacaktı */
+    
+}
+
+.brands .brand-flex li img {
+    width: 50%; /* sayfada yüzde kaç uzun görünsünler 50 görünsünler */
+    height: auto;
+}
+
+.cta-box {
+    
+    margin-bottom: 10px; /* altlardan boşluk verdik */
+}
+
+.cta-box h2 { /* h2 yazısının özellikleri */
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+.cta-box p { /* paragrafın özellikleri*/
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+.cta-box a { /* şimdi ücrestsi dene kelimelerimiz ve özellikleri */
+    background: #00BAF2;
+    display:block; /* blok şeklinde olması için block özelliğini verdim  display zaten kutu gibi */
+    padding: 10px 55px; /* padding ile yükseklik ve sağa doğru pixel verdik */
+    color: #fff;
+    text-decoration: none;
+    width: max-content; /* sayfa sağdan soldan çekildiği zaman uyumlu olması içinde max content verdim*/
+    margin-top: 15px; /* yukarıda ki paragrafla arasında ki yukarıdan verilen değer 15 pizel boşluk olacak demek */
+    border-radius: 5px;
+}
+
+.clear-both { /* bunu sonradan öğrendim ve  önceden kullandığımız floatları temizliyormuş işe yaradı açıkcası*/
+    clear: both;
+}
+
+.info-content { 
+    padding-top: 50px; /* direkt olarak info olarak belirlediğim yeri üst divden ayırıyor yani markalardan */
+    display: flex;
+    
+}
+
+.info-content img {
+    width: 40%;
+    height: auto;
+}
+
+.footer {
+    background: #0A1F44;
+    padding: 20px;
+    color: rgb(247, 241, 241); /* yazıların rengini belli ettim liste içerisinde ki elemanlar hariç ama */
+}
+
+
+.footer .footer-desc { /* açıklamasında ki yazının genişliği*/
+    width: 500px;
+}
+
+.footer p.footer-right{
+    position:relative ; /* beceremediğim için relative diyerek göreceli bir konum yaptım aşağıda da özelliklerini verdim*/
+    bottom: 54px;
+    opacity: 0.5;
+    display: flex; /* esnet*/
+    justify-content: flex-end ; /* ve yazımı sona koy */
+    
+   
+    
+}
+
+.footer hr.footer-hr { /* yazı altında ki şekil çizgi */
+    opacity: 0.2; /* saydamlığı opacity*/
+    color: #fff;
+    margin: 30px 0;
+}
+
+
+
+.footer .footer-nav {
+    display: flex; /*sayfada listelerin flex bir yapıda sıralanması için */
+    justify-content: space-around;
+}
+
+.footer .footer-nav .item h3 { /* h3 etiketinde ki about uslar*/
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer .footer-nav .item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-nav .item ul li a {
+    display: block;
+    color: grey;
+    font-size: 13px; /* liste elemlarının size'ı*/
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+
+
