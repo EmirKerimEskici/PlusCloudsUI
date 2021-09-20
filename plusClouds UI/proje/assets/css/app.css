@@ -56,6 +56,10 @@ html, body {
     justify-content:space-between; /* elemanların hepsini aralarında eşit boşluklarla sıralanması içindir */
 }
 
+div .flex{
+    display: flex;
+}
+
 .main .main-left h1 {
     font-size: 56px;  /* başlığımızın boyutunu ayarladık */
     color: #fff;
