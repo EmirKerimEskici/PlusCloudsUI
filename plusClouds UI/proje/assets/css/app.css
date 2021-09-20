@@ -149,7 +149,7 @@ html, body {
     border-radius: 5px;
 }
 
-.clear-both { /* bunu sonradan öğrendim ve  önceden kullandığımız floatları temizliyormuş işe yaradı açıkcası*/
+.clear-both { 
     clear: both;
 }
 
@@ -176,10 +176,10 @@ html, body {
 }
 
 .footer p.footer-right{
-    position:relative ; /* beceremediğim için relative diyerek göreceli bir konum yaptım aşağıda da özelliklerini verdim*/
+    position:relative ; 
     bottom: 54px;
     opacity: 0.5;
-    display: flex; /* esnet*/
+    display: flex; 
     justify-content: flex-end ; /* ve yazımı sona koy */
     
    
